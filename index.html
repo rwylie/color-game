@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+  <head>
+    <title>{{title}} | {{site_name}}</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+
+  </head>
+  <body style="background-color: grey">
+
+    <div class="container text-center">
+      <br>
+        <h1 id="showcase" style="color:purple;"> Hex-Monsters </h1>
+      </br>
+      <button id="start-button" onclick="clearArray(), generateHex1(), generateHex2(), generateHex3(), randomColor()"> Start Game </button>
+      <br><br>
+      <div class="row">
+        <div class="col-6 col-md-4 text-center">
+          <div id="demo1"></div>
+          <div id="showcase1" style="background: #FFFFFF; height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+        </div>
+        <div class="col-6 col-md-4">
+          <p id="demo2"></p>
+          <div id="showcase2" style="background: #FFFFFF; height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+        </div>
+        <div class="col-6 col-md-4">
+          <p id="demo3"></p>
+          <div id="showcase3" style="background: #FFFFFF; height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+          </div>
+      </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
+    <script>
+    var RGBChange = function() {
+    	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
+    };
+    var r = $('#R').slider()
+    		.on('slide', RGBChange)
+    		.data('slider');
+    var g = $('#G').slider()
+    		.on('slide', RGBChange)
+    		.data('slider');
+    var b = $('#B').slider()
+    		.on('slide', RGBChange)
+    		.data('slider');
+    </script>
+  </body>
+</html>
