@@ -11,6 +11,7 @@ var colorArray = [];
   function clearArray() {
     colorArray = [];
   }
+
   function generateHex1() {
     color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
     document.getElementById('showcase1').style.backgroundColor = color1.toUpperCase();
