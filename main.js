@@ -1,15 +1,6 @@
-// var color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-// var color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-// var color3 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-
 //update the color of a box with value of color 1
 //document.getElementById('demo').style.backgroundColor = color1;
 //var result = document.getElementById('demo').innterHTML;
-
-// var result = document.getElementById('demo').innerHTML;
-// var result1 = document.getElementById('demo1').innerHTML;
-// var result2 = document.getElementById('demo2').innerHTML;
-// var result3 = document.getElementById('demo3').innerHTML;
 
 var color1;
 var color2;
@@ -22,21 +13,21 @@ var colorArray = [];
   }
   function generateHex1() {
     color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.getElementById('showcase1').style.backgroundColor = color1;
-    document.getElementById('answer1').innerHTML = color1;
-    colorArray.push(color1);
+    document.getElementById('showcase1').style.backgroundColor = color1.toUpperCase();
+    document.getElementById('answer1').innerHTML = color1.toUpperCase();
+    colorArray.push(color1.toUpperCase());
 }
   function generateHex2() {
     color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.getElementById('showcase2').style.backgroundColor = color2;
-    document.getElementById('answer2').innerHTML = color2;
-    colorArray.push(color2);
+    document.getElementById('showcase2').style.backgroundColor = color2.toUpperCase();
+    document.getElementById('answer2').innerHTML = color2.toUpperCase();
+    colorArray.push(color2.toUpperCase());
   }
   function generateHex3() {
     color3 = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    document.getElementById('showcase3').style.backgroundColor = color3;
-    document.getElementById('answer3').innerHTML = color3;
-    colorArray.push(color3);
+    document.getElementById('showcase3').style.backgroundColor = color3.toUpperCase();
+    document.getElementById('answer3').innerHTML = color3.toUpperCase();
+    colorArray.push(color3.toUpperCase());
   }
   function randomColor(arr) {
     randomC = arr[Math.floor(Math.random() * arr.length)];
@@ -82,11 +73,6 @@ var colorArray = [];
       });
 
       $('#start-button').click(function() {
-        console.log(color1);
-        console.log(color2);
-        console.log(color3);
-        console.log(colorArray);
-        console.log(randomC);
         document.getElementById('determine-win').innerHTML = '';
         $("#showcase1").show();
         $("#showcase2").show();
