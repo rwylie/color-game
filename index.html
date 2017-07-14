@@ -10,45 +10,55 @@
   <body >
     <div class="container text-center">
       <br>
-      <h1 id="showcase" style="color:purple;"> Hex-Monsters </h1>
-      </br>
-
-      <button id="start-button" onclick="clearArray(), generateHex1(),
-      generateHex2(), generateHex3(), randomColor(colorArray)"> Start Game </button>
-      <br><br>
-
+      <div class="row">
+        <h1 id="showcase" style="color: #778899;"> Hexie </h1><h1 style="color: #FF6666"> Fox </h1>
+      </div>
+      <br>
       <!-- show random color value -->
-      <div class="row text-center">
+      <div class="row">
         <div class="col-12 text-center">
-          <p id="random-color"> </p>
+          <h2 style="color: grey;" id="guess"> </h2>
+          <h2 style="color: purple"id="determine-win"></h2>
+          <br>
         </div>
       </div>
+      <div class="row text-center">
+        <div class="col-12 text-center">
+          <h2 style="color: grey;" id="random-color"> </h2>
+        </div>
+      </div>
+
 
       <!-- colors to guess from  -->
       <div class="row">
-        <div class="col-6 col-md-4 text-center">
+
+        <div class="col-6 col-sm-4 text-center">
           <h3 id="answer1"></h3>
           <div onclick="match(color1)" id="showcase1" style="background: #FFFFFF;
-          height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+          height: 135px; margin: 20px; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-sm-4">
           <h3 id="answer2"></h3>
           <div onclick="match(color2)" id="showcase2" style="background: #FFFFFF;
-          height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+          height: 135px; margin: 20px; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
         </div>
 
-        <div class="col-6 col-md-4">
+        <div class="col-6 col-sm-4">
           <h3 id="answer3"></h3>
           <div onclick="match(color3)" id="showcase3" style="background: #FFFFFF;
-          height: 50px; margin: 20px; border: 1px solid black; border-radius: 10px;"></div>
+          height: 130px; margin: 20px; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
+        </div>
+
+      </div>
+
+      <div class="row text-center">
+        <div class="col-12">
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateHex1(),
+          generateHex2(), generateHex3(), randomColor(colorArray)"> Start Game </button>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 id="determine-win"></h2>
-        </div>
     </div>
 
 
@@ -57,19 +67,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>
-    <script>
-    var RGBChange = function() {
-    	$('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
-    };
-    var r = $('#R').slider()
-    		.on('slide', RGBChange)
-    		.data('slider');
-    var g = $('#G').slider()
-    		.on('slide', RGBChange)
-    		.data('slider');
-    var b = $('#B').slider()
-    		.on('slide', RGBChange)
-    		.data('slider');
-    </script>
+    <script src="https://use.fontawesome.com/8f68370d8a.js"></script>
   </body>
 </html>

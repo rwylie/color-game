@@ -41,6 +41,7 @@ var colorArray = [];
   function randomColor(arr) {
     randomC = arr[Math.floor(Math.random() * arr.length)];
     document.getElementById('random-color').innerHTML = randomC;
+    document.getElementById('guess').innerHTML = "Guess the Color";
 }
 
 //function that checks to see if the user chooses the correct color;
