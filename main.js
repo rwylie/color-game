@@ -38,7 +38,7 @@ var colorArray = [];
 
 //function that checks to see if the user chooses the correct color;
   function match(color) {
-    if (color === randomC) {
+    if (color.toUpperCase() === randomC.toUpperCase()) {
       document.getElementById('determine-win').innerHTML = "You Win!";
       resetGame();
     } else {
