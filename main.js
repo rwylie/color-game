@@ -11,13 +11,32 @@ var colorArray = [];
   function clearArray() {
     colorArray = [];
   }
+//   function createHex(num) {
+//     for (var i = 0; i < num ; i++) {
+//       window['color' + i] = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//       colorArray.push(window['color' + i].toUpperCase());
+//     }
+//   }
+//   function createDocs(num) {
+//     for  (var i = 0; i < num; i++) {
+//       if color0 {
+//         document.getElementById('showcase0').style.backgroundColor = color0.toUpperCase();
+//         document.getElementById('answer0').innerHTML = color0.toUpperCase();
+//       }
+//       else if color1 {
+//         document.getElementById('showcase0').style.backgroundColor = color0.toUpperCase();
+//         document.getElementById('answer0').innerHTML = color0.toUpperCase();
+//       }
+//   }
+// }
 
   function generateHex1() {
     color1 = '#' + Math.floor(Math.random() * 16777215).toString(16);
     document.getElementById('showcase1').style.backgroundColor = color1.toUpperCase();
     document.getElementById('answer1').innerHTML = color1.toUpperCase();
     colorArray.push(color1.toUpperCase());
-}
+  }
+
   function generateHex2() {
     color2 = '#' + Math.floor(Math.random() * 16777215).toString(16);
     document.getElementById('showcase2').style.backgroundColor = color2.toUpperCase();
@@ -83,3 +102,10 @@ var colorArray = [];
         $("#answer3").hide();
       });
   });
+// 1. create multiple color variables based on a user entered number
+// 2. create for loop less than 6
+//3. if user gets the right value on the 1st try they move onto the next level.
+  // function createVar(num) { for (var i = 0; i < num + 1; i++) {
+  //   window['color' + i] = '#' + Math.floor(Math.random() * 16777215).toString(16);
+//   }
+// }
