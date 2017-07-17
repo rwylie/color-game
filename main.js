@@ -28,9 +28,9 @@ function generateDiv(num) {
   function generateHex(num) {
     for (var i = 0; i < num; i++){
     	window['color' + i] = '#' + Math.floor(Math.random() *16777215).toString(16);
-      colorArray.push(window['color' + i]);
-      document.getElementById('showcase' + i).style.backgroundColor = colorArray[i];
-      document.getElementById('answer' + i).innerHTML = colorArray[i];
+      colorArray.push(window['color' + i].toUpperCase());
+      document.getElementById('showcase' + i).style.backgroundColor = colorArray[i].toUpperCase();
+      document.getElementById('answer' + i).innerHTML = colorArray[i].toUpperCase();
     }
 
 	  // document.getElementById('showcase1').style.backgroundColor = color1

@@ -1,3 +1,6 @@
 body {
   background-color: #EDEDED;
 }
+h1 {
+  text-transform: uppercase;
+}
