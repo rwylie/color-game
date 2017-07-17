@@ -16,7 +16,7 @@ function generateDiv(num) {
   for (var i = 0; i < num; i++) {
     $('#target').append($(`<div class="showcase" id="showcase${i}"
     onclick="match(color${i})"
-      class="col-6 col-sm-2" style="background: #FF6666;
+      class="col-12 col-sm-2" style="background: #FF6666;
       height: 135px; margin: auto; border-radius: 20px;">
       <img src="images/foxy-emoji-1.png" class="img-fluid">
       <br><br>
@@ -118,10 +118,12 @@ function generateDiv(num) {
         $("#showcase2").show();
         $("#showcase3").show();
         $("#showcase4").show();
+        $('#showcase5').show();
         $("#answer0").hide();
         $("#answer1").hide();
         $("#answer2").hide();
         $("#answer3").hide();
         $("#answer4").hide();
+        $("#answer5").hide();
       });
   });
