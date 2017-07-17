@@ -15,7 +15,7 @@
         <h1 id="showcase" style="color: #778899;"> Hexie </h1><h1 style="color: #FF6666"> Fox </h1>
       </div>
       <br>
-      <!-- show random color value -->
+      <!-- determine win color -->
       <div class="row">
         <div class="col-12 text-center">
           <h2 style="color: grey;" id="guess"> </h2>
@@ -24,6 +24,7 @@
         </div>
       </div>
 
+      <!-- show random color value -->
       <div class="row text-center">
         <div class="col-12 text-center">
           <h1 style="color: grey;" id="random-color"> </h1>
@@ -31,34 +32,21 @@
       </div>
       <br>
 
-      <!-- colors to guess from  -->
-      <div class="row">
+      <!-- colors to guess from genereated in Javascript -->
+      <div id="target" class="row">
 
-        <div class="col-6 col-sm-4 text-center">
-          <div onclick="match(color1)" id="showcase1" style="background: #FF6666;
-          width: 150px; margin: auto; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
-          <h3 id="answer1"></h3>
-          <br>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div onclick="match(color2)" id="showcase2" style="background: #FF6666;
-          width: 150px; margin: auto; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
-          <h3 id="answer2"></h3>
-        </div>
-
-        <div class="col-6 col-sm-4">
-          <div onclick="match(color3)" id="showcase3" style="background: #FF6666;
-          width: 150px; margin: auto; border-radius: 20px;"><img src="images/foxy-emoji-1.png" class="img-fluid"></div>
-          <h3 id="answer3"></h3>
-        </div>
       </div>
 
-      <br><br>
+<!-- button to start the game -->
+      <br><br><br>
       <div class="row text-center">
         <div class="col-12">
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateHex1(),
-          generateHex2(), generateHex3(), randomColor(colorArray)"> Start Fox</button>
+          <h3 style="color: grey;">Choose Level</h3>
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateDiv(2), generateHex(2), randomColor(colorArray)"> 1 </button>
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateDiv(3), generateHex(3), randomColor(colorArray)"> 2 </button>
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateDiv(4), generateHex(4), randomColor(colorArray)"> 3 </button>
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateDiv(5), generateHex(5), randomColor(colorArray)"> 4 </button>
+          <button style="background-color: #FF6666; color: white; border-radius: 10px;" id="start-button" onclick="clearArray(), generateDiv(6), generateHex(6), randomColor(colorArray)"> 5 </button>
         </div>
       </div>
 
