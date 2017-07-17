@@ -13,17 +13,17 @@ function clearArray() {
 
   //loop that creates multiple variables
 function generateDiv(num) {
-  for (var i = 0; i < num; i++) {
-    $('#target').append($(`<div class="showcase" id="showcase${i}"
-    onclick="match(color${i})"
-      class="col-12 col-sm-2" style="background: #FF6666;
-      height: 135px; margin: auto; border-radius: 20px;">
-      <img src="images/foxy-emoji-1.png" class="img-fluid">
-      <br><br>
-      <h3 id="answer${i}" style="color: #778899"></h3><br><br>
-    </div> <br><br>`))
+    for (var i = 0; i < num; i++) {
+      $('#target').append($(`<div class="showcase col-xs-6 " id="showcase${i}"
+      onclick="match(color${i})"
+        style="background: #FF6666;
+        height: 135px; margin: 15px 5px; border-radius: 20px;">
+        <img src="images/foxy-emoji-1.png" class="img-fluid">
+        <br>
+        <h3 id="answer${i}" style="color: #778899"></h3><br><br>
+      </div> <br><br>`))
+      }
     }
-  }
 
   function generateHex(num) {
     for (var i = 0; i < num; i++){
@@ -94,6 +94,9 @@ function generateDiv(num) {
     });
     $("body").on("click", "#showcase4", function() {
         $('#answer4').fadeIn('fast');
+    });
+    $("body").on("click", "#showcase5", function() {
+        $('#answer5').fadeIn('fast');
     });
 
     $('body').on("click", "#start-button", function() {
