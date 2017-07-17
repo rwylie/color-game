@@ -14,13 +14,12 @@ function clearArray() {
   //loop that creates multiple variables
 function generateDiv(num) {
     for (var i = 0; i < num; i++) {
-      $('#target').append($(`<div class="showcase col-xs-6 " id="showcase${i}"
+      $('#target').append($(`<div class="showcase" id="showcase${i}"
       onclick="match(color${i})"
-        style="background: #FF6666;
-        height: 135px; margin: 15px 5px; border-radius: 20px;">
+        style="background: #FF6666; margin: auto; margin-bottom: 30px; height: 135px;
+        border-radius: 20px;">
         <img src="images/foxy-emoji-1.png" class="img-fluid">
-        <br>
-        <h3 id="answer${i}" style="color: #778899"></h3><br><br>
+        <h3 id="answer${i}" style="color: #778899;"></h3><br><br>
       </div> <br><br>`))
       }
     }
