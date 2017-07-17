@@ -75,22 +75,7 @@ function generateDiv(num) {
         $("#showcase" + i).show();
         $("#answer" + i).show();
       });
-    // document.getElementById('showcase0').style.backgroundColor = color0;
-    // document.getElementById('showcase1').style.backgroundColor = color1;
-    // document.getElementById('showcase2').style.backgroundColor = color2;
-    // document.getElementById('showcase3').style.backgroundColor = color3;
-    // document.getElementById('showcase4').style.backgroundColor = color4;
     randomC = '';
-      // $("#showcase0").show();
-      // $("#showcase1").show();
-      // $("#showcase2").show();
-      // $("#showcase3").show();
-      // $("#showcase4").show();
-      // $("#answer0").show();
-      // $("#answer1").show();
-      // $("#answer2").show();
-      // $("#answer3").show();
-      // $("#answer4").show();
     }, 500);
   }
 
@@ -111,19 +96,11 @@ function generateDiv(num) {
         $('#answer4').fadeIn('fast');
     });
 
-      $('body').on("click", "#start-button", function() {
-        document.getElementById('determine-win').innerHTML = '';
-        $("#showcase0").show();
-        $("#showcase1").show();
-        $("#showcase2").show();
-        $("#showcase3").show();
-        $("#showcase4").show();
-        $('#showcase5').show();
-        $("#answer0").hide();
-        $("#answer1").hide();
-        $("#answer2").hide();
-        $("#answer3").hide();
-        $("#answer4").hide();
-        $("#answer5").hide();
-      });
+    $('body').on("click", "#start-button", function() {
+      document.getElementById('determine-win').innerHTML = '';
+      $('.showcase').each(function (i) {
+        $("#showcase" + i).show();
+        $("#answer" + i).hide();
+    });
   });
+});
