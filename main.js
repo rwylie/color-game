@@ -114,7 +114,7 @@ function generateDiv(num) {
 
 // .each is a jquery loop, below it is used to link the class showcase with showing the colors
 //and hiding the answers when a user clicks a button with the id of start-button (which are now level buttons)
-    $('body').on("click", "#start-button", function() {
+    $('body').on("click", ".start-button", function() {
       document.getElementById('determine-win').innerHTML = '';
       $('.showcase').each(function (i) {
         $("#showcase" + i).show();
