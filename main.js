@@ -100,7 +100,7 @@ function generateDiv(num) {
     });
 
     //hide fox image on level start-button
-    $('#start-button').click(function() {
+    $('.start-button').click(function () {
       $('.img-start').hide();
       $('.img-hover').hide();
     });
