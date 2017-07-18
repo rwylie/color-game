@@ -16,7 +16,7 @@ button {
 }
 
 /*media queries*/
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   .modal-dialog {
     width: 375px;
   }
