@@ -4,17 +4,88 @@
     <title>{{title}} | {{site_name}}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/styles/main.css">
+
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
 
-  <body >
+  <body>
+    <!-- Header -->
     <div class="container text-center">
       <br>
       <div class="row">
         <h1 id="showcase" style="color: #778899;"> Hexie </h1><h1 style="color: #FF6666"> Fox </h1>
       </div>
       <br>
+
+      <!-- Tutorial Modal -->
+    <div class="row">
+      <button style="background-color: #778899; color: white;"class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">Tutorial</button>
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="container">
+              <div class="row">
+                <!-- <h2 style="color: #778899;"> Hexie </h2><h2 style="color: #FF9900"> Fox </h2> -->
+              </div>
+              <img class="img-fluid"src="/images/hexiefox.png" style="width: 500px;">
+                <p>
+                  Welcome to HEXIEFOX, so glad you could join us.  Little furry fox friends have all come together to teach you a bit
+                  about hexadecimal colors. Are you ready?
+                </p>
+                <p>
+                  When you think of hexadecimal values think #RRGGBB (#RedGreenBlue).
+                  Hexadecimal values use numbers and letters to specify a specific color
+                  and the intensity of the color.  00 through FF are used in each place to define how strong a specific color is. 00 is the lowest and FF
+                  is the highest.
+                </p>
+                <p>
+                  Therefore #000000 would have no color (black), and #FFFFFF would have the maximum amount of colors and result in white.
+                  #FF0000 is be red, #00FF00 is green, and #0000FF is blue. Is it starting to make sense?
+                </p>
+                <h3 style="color: #778899"> Ready for a some practice? </h3>
+                <p> <strong>Guess the hexadecimal value of the following fox </strong></p>
+                <div style="background: #FF9900; margin: auto; margin-bottom: 30px; height: 115px; width: 135px;
+                border-radius: 20px;">
+                  <img src="images/foxy-emoji-1.png" class="img-fluid fox">
+                </div>
+              <div class="row">
+                <div class='col centered'>
+                  <button class="btn tutorial" style="border: none;"> #FFFF99 </button>
+                  <button class="btn tutorial" style="border: none;"> #0099FF </button>
+                  <button class="btn tutorial btn-info" style="border: none;"> #FF9900 </button>
+                  <br><br>
+                  <p>Did you scroll over the choices?  The button that highlights in blue is the correct choice.</p>
+                  <p> The answer is #FF9900, FF is strong red, and when you add a bit of green with 99, you get orange. </p>
+                </div>
+                <p> Let's try another one, take a look at the folowing fox and hexadecimal values.  Once you think
+                  you have a guess, scroll over the buttons, the correct value will light up with blue.</p>
+              </div>
+                <h3 class="centered" style="color: #778899"> Guess the value </h3>
+                <br>
+                <div class="row">
+                <div style="background: #9900FF; margin: auto; margin-bottom: 30px; height: 115px; width: 135px;
+                border-radius: 20px;">
+                  <img src="images/foxy-emoji-1.png" class="img-fluid fox">
+                </div>
+              </div>
+
+                <div class="row">
+                <div class='col centered'>
+                  <button class="btn tutorial" style="border: none;"> #FF0099 </button>
+                  <button class="btn tutorial btn-info" style="border: none;"> #9900FF </button>
+                  <button type="button"class="btn tutorial" style="border: none;"> #FF9900 </button>
+                  <br><br>
+                  <p>Is it starting to make sense? Are you ready to play the game?</p>
+                  <p>Close out of this tutorial by clicking outside it's window. Good luck!<img style="width: 100px;" src="/images/foxyfingers.png"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
       <!-- determine win color -->
       <div class="row">
         <div class="col-12 text-center">
@@ -36,6 +107,13 @@
       <div class="row"id="target">
       </div>
 
+        <!-- Image onload -->
+        <div class="row img-start">
+          <div style="margin: 0 auto;">
+            <img src="/images/foxysmile.png"class="img-show" style="height: 150px;">
+            <img src="/images/foxyhappy.png"class="img-hover" style="height: 150px; display: none">
+          </div>
+        </div>
 
       <!-- button to start the game -->
       <br><br><br>

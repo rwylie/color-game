@@ -1,0 +1,27 @@
+body {
+  background-color: #EDEDED;
+}
+h1 {
+  text-transform: uppercase;
+}
+.centered {
+  margin: 0 auto;
+}
+.tutorial {
+  background-color: #778899;
+  color: white;
+}
+button {
+  /*cursor: url('/images/foxyhappy.png'), auto;*/
+  cursor: pointer;
+}
+/*image hover*/
+
+
+
+/*media queries*/
+@media (max-width: 500px) {
+  .modal-dialog {
+    width: 400px;
+  }
+}

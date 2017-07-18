@@ -1,6 +1,5 @@
-//update the color of a box with value of color 1
-//document.getElementById('demo').style.backgroundColor = color1;
-//var result = document.getElementById('demo').innterHTML;
+//HEXIEFOX
+//game that allows the user to guess a hexadecimal color
 
 //empty variable that will hold the value of the color the user will guess.
 var randomC;
@@ -76,7 +75,11 @@ function generateDiv(num) {
 //the the event listener .on is needed in jquery and will 'listens'
 //for when those elements are created
 
+
   $(document).ready(function(){
+
+
+
     $("body").on("click", "#showcase0", function() {
       $('#answer0').fadeIn('fast');
     });
@@ -95,6 +98,19 @@ function generateDiv(num) {
     $("body").on("click", "#showcase5", function() {
         $('#answer5').fadeIn('fast');
     });
+
+    //hide fox image on level start-button
+    $('#start-button').click(function() {
+      $('.img-start').hide();
+      $('.img-hover').hide();
+    });
+    //toggle foxes
+    $('.img-show').hover(function() {
+      $('.img-hover').show();
+      $('.img-show').hide();
+    });
+
+
 
 // .each is a jquery loop, below it is used to link the class showcase with showing the colors
 //and hiding the answers when a user clicks a button with the id of start-button (which are now level buttons)
