@@ -18,6 +18,6 @@ button {
 /*media queries*/
 @media only screen and (max-width: 500px) {
   .modal-dialog {
-    width: 375px;
+    width: 300px;
   }
 }
