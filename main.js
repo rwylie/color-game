@@ -2,8 +2,9 @@
 //document.getElementById('demo').style.backgroundColor = color1;
 //var result = document.getElementById('demo').innterHTML;
 
-
+//empty variable that will hold the value of the color the user will guess.
 var randomC;
+//empty array that later will push hexadecimal values to
 var colorArray = [];
 
 function clearArray() {
@@ -11,7 +12,7 @@ function clearArray() {
   $('#target').empty();
 }
 
-  //loop that creates multiple variables
+  //loop that creates multiple divs based on what level the user chooses
 function generateDiv(num) {
     for (var i = 0; i < num; i++) {
       $('#target').append($(`<div class="showcase" id="showcase${i}"
@@ -24,6 +25,9 @@ function generateDiv(num) {
       }
     }
 
+//generates the hexadecimal colors and pushes them to colorArray
+//creates showcase + i and gives it a color value
+//creates answer + i and gives it a color value
   function generateHex(num) {
     for (var i = 0; i < num; i++){
     	window['color' + i] = '#' + Math.floor(Math.random() *16777215).toString(16);
@@ -32,18 +36,9 @@ function generateDiv(num) {
       document.getElementById('answer' + i).innerHTML = colorArray[i].toUpperCase();
     }
 
-	  // document.getElementById('showcase1').style.backgroundColor = color1
-  	// document.getElementById('showcase2').style.backgroundColor = color2
-    // document.getElementById('showcase3').style.backgroundColor = color3
-    // document.getElementById('showcase4').style.backgroundColor = color4
-    //
-    // document.getElementById('answer1').innerHTML = color1
-    // document.getElementById('answer2').innerHTML = color2
-    // document.getElementById('answer3').innerHTML = color3
-    // document.getElementById('answer4').innerHTML = color4
-
 }
 
+//function that uses Math.random to choose a random color from the colorArray
   function randomColor(arr) {
     randomC = arr[Math.floor(Math.random() * arr.length)];
     document.getElementById('random-color').innerHTML = randomC;
@@ -77,6 +72,9 @@ function generateDiv(num) {
     randomC = '';
     }, 500);
   }
+// javascript is loading the divs that hold shocase + i and answer + i
+//the the event listener .on is needed in jquery and will 'listens'
+//for when those elements are created
 
   $(document).ready(function(){
     $("body").on("click", "#showcase0", function() {
@@ -98,6 +96,8 @@ function generateDiv(num) {
         $('#answer5').fadeIn('fast');
     });
 
+// .each is a jquery loop, below it is used to link the class showcase with showing the colors
+//and hiding the answers when a user clicks a button with the id of start-button (which are now level buttons)
     $('body').on("click", "#start-button", function() {
       document.getElementById('determine-win').innerHTML = '';
       $('.showcase').each(function (i) {
