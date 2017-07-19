@@ -4,8 +4,6 @@ Hello Foxies, get your hex on with this fun little game to help you learn the he
 
 [Play HEXIEFOX](https://hexiefox.rondawylie.com)
 
-<hr>
-
 ## Installation
 to run locally:
 ``` python3 -m http.server 8000 ```
@@ -14,3 +12,8 @@ to run locally:
 * HTML/CSS
 * Javascript
 * Jquery
+* Bootstrap
+
+## Acknowledgments
+
+Graphics by [NatAlt Designs](http://natalt.co.uk/)

@@ -3,6 +3,13 @@ body {
 }
 h1 {
   text-transform: uppercase;
+  color: #778899;
+}
+h2 {
+  color: #FF6666;
+}
+h3 {
+  color: #778899;
 }
 .centered {
   margin: 0 auto;
@@ -13,6 +20,28 @@ h1 {
 }
 button {
   cursor: pointer;
+}
+.btn-level {
+  background-color: #FF6666;
+  color: white;
+  border-radius: 10px;
+}
+.no-border {
+  border: none;
+}
+.orange {
+  color: #FF6666;
+}
+.grey {
+  color: #778899;
+}
+.modal-img {
+  background: #FF9900;
+  margin: auto;
+  margin-bottom: 30px;
+  height: 115px;
+  width: 135px;
+  border-radius: 20px;
 }
 
 /*media queries*/

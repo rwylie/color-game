@@ -1,11 +1,12 @@
 //HEXIEFOX
 //game that allows the user to guess a hexadecimal color
 
-//empty variable that will hold the value of the color the user will guess.
+//holds the value of the color the user will guess.
 var randomC;
-//empty array that later will push hexadecimal values to
 var colorArray = [];
+//array used for deciding when there is only 1 guess left
 var matchArray = [];
+//empty array that later will push hexadecimal values to
 function clearArray() {
   colorArray = [];
   matchArray = [];
@@ -22,7 +23,7 @@ function generateDiv(num) {
         style="background: #FF6666; margin: auto; margin-bottom: 35px; height: 8em;
         border-radius: 20px;">
         <img src="images/foxy-emoji-1.png" class="img-fluid">
-        <h3 id="answer${i}" style="color: #778899;"></h3><br><br>
+        <h3 id="answer${i}"></h3><br><br>
       </div> <br><br>`))
       }
     }
@@ -75,18 +76,6 @@ function generateDiv(num) {
     }
   }
 
-
-  //colorArray level 1 has 2 elements in it, so if they guess one on level two
-  //it should show them the answer after one guess if it's wrong. So if there is
-  //one element left in the array, they have no more chances and the game is over
-
-
-  // var points = 0;
-  // function trackPoints() {
-  // for (var i; i < )
-  // points =+ 1;
-  // console.log(points);
-  // }
   function resetGame() {
     setTimeout(function () {
       $('.showcase').each(function (i) {
@@ -97,8 +86,8 @@ function generateDiv(num) {
     randomC = '';
     }, 500);
   }
-// javascript is loading the divs that hold shocase + i and answer + i
-//the the event listener .on is needed in jquery and will 'listens'
+// javascript is loading the divs that hold showcase + i and answer + i
+//the the event listener .on is needed in jquery and will 'listen'
 //for when those elements are created
 
 
@@ -136,6 +125,8 @@ function generateDiv(num) {
       $('.img-hover').show();
       $('.img-show').hide();
     });
+
+    //disable color buttons after clicked
 
 
 

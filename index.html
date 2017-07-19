@@ -3,7 +3,7 @@
   <head>
     <title>HEXIEFOX</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css"> -->
     <link rel="stylesheet" href="/styles/main.css">
     <meta name=viewport content="width=device-width, initial-scale=1">
   </head>
@@ -13,20 +13,17 @@
     <div class="container text-center">
       <br>
       <div class="row">
-        <h1 id="showcase" style="color: #778899;"> Hexie </h1><h1 style="color: #FF6666"> Fox </h1>
+        <h1 id="showcase" class="grey"> Hexie </h1><h1 class="orange"> Fox </h1>
       </div>
       <br>
 
       <!-- Tutorial Modal -->
     <div class="row">
-      <button style="background-color: #778899; color: white;"class="btn" data-toggle="modal" data-target=".bd-example-modal-lg">Tutorial</button>
+      <button class="btn tutorial" data-toggle="modal" data-target=".bd-example-modal-lg">Tutorial</button>
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="container">
-              <div class="row">
-                <!-- <h2 style="color: #778899;"> Hexie </h2><h2 style="color: #FF9900"> Fox </h2> -->
-              </div>
               <img class="img-fluid" src="/images/HEXIEFOX.png" style="width: 500px;">
                 <p>
                   Welcome to HEXIEFOX, so glad you could join us.  Little furry fox friends have all come together to teach you a bit
@@ -41,17 +38,16 @@
                   Therefore #000000 would have no color (black), and #FFFFFF would have the maximum amount of colors and result in white.
                   #FF0000 is be red, #00FF00 is green, and #0000FF is blue. Is it starting to make sense?
                 </p>
-                <h3 style="color: #778899"> Ready for a some practice? </h3>
-                <p> <strong>Guess the hexadecimal value of the following fox </strong></p>
-                <div style="background: #FF9900; margin: auto; margin-bottom: 30px; height: 115px; width: 135px;
-                border-radius: 20px;">
+                <h3> Ready for a some practice? </h3>
+                <p> <strong>Guess the hexadecimal value of the following fox. </strong></p>
+                <div class="modal-img">
                   <img src="images/foxy-emoji-1.png" class="img-fluid fox">
                 </div>
               <div class="row">
                 <div class='col centered'>
-                  <button class="btn tutorial" style="border: none;"> #FFFF99 </button>
-                  <button class="btn tutorial" style="border: none;"> #0099FF </button>
-                  <button class="btn tutorial btn-info" style="border: none;"> #FF9900 </button>
+                  <button class="btn tutorial no-border"> #FFFF99 </button>
+                  <button class="btn tutorial no-border"> #0099FF </button>
+                  <button class="btn tutorial btn-info no-border"> #FF9900 </button>
                   <br><br>
                   <p>Did you scroll over (or click) the choices?  The button that highlights in blue is the correct choice.</p>
                   <p> The answer is #FF9900, FF is strong red, and when you add a bit of green with 99, you get orange. </p>
@@ -59,20 +55,19 @@
                 <p> Let's try another one, take a look at the folowing fox and hexadecimal values.  Once you think
                   you have a guess, scroll over (or click) the buttons, the correct value will light up with blue.</p>
               </div>
-                <h3 class="centered" style="color: #778899"> Guess the value </h3>
+                <h3 class="centered"> Guess the value </h3>
                 <br>
                 <div class="row">
-                <div style="background: #9900FF; margin: auto; margin-bottom: 30px; height: 115px; width: 135px;
-                border-radius: 20px;">
+                <div style="background: #9900FF;" class="modal-img">
                   <img src="images/foxy-emoji-1.png" class="img-fluid fox">
                 </div>
               </div>
 
                 <div class="row">
                 <div class='col centered'>
-                  <button class="btn tutorial" style="border: none;"> #FF0099 </button>
-                  <button class="btn tutorial btn-info" style="border: none;"> #9900FF </button>
-                  <button type="button"class="btn tutorial" style="border: none;"> #FF9900 </button>
+                  <button class="btn tutorial no-border"> #FF0099 </button>
+                  <button class="btn tutorial btn-info no-border"> #9900FF </button>
+                  <button class="btn tutorial no-border"> #FF9900 </button>
                   <br><br>
                   <p>Is it starting to make sense? Are you ready to play the game?</p>
                   <p>Good luck foxies!<img style="width: 100px;" src="/images/foxyfingers.png"></p>
@@ -81,7 +76,7 @@
               </div>
               <div class="modal-footer text-center">
                 <div class="centered">
-                  <button type="button" class="btn btn-default" style="background-color: #FF6666; color: white;" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-default btn-level" data-dismiss="modal">Close</button>
                 </div>
               </div>
             </div>
@@ -93,8 +88,8 @@
       <!-- determine win color -->
       <div class="row">
         <div class="col-12 text-center">
-          <h2 style="color: grey;" id="guess"> </h2>
-          <h2 style="color: #FF6666"id="determine-win"></h2>
+          <h2 style="color: #778899;" id="guess"> </h2>
+          <h2 id="determine-win"></h2>
           <h2 id="images-win"></h2>
           <br>
         </div>
@@ -103,7 +98,7 @@
       <!-- show random color value -->
       <div class="row text-center">
         <div class="col-12 text-center">
-          <h1 style="color: #778899;" id="random-color"> </h1>
+          <h1 id="random-color"> </h1>
         </div>
       </div>
       <br>
@@ -114,9 +109,9 @@
 
         <!-- Image onload -->
         <div class="row img-start">
-          <div style="margin: 0 auto;">
-            <img src="/images/foxysmile.png"class="img-show" style="height: 150px;">
-            <img src="/images/foxyhappy.png"class="img-hover" style="height: 150px; display: none">
+          <div class="centered">
+            <img src="/images/foxysmile.png" class="img-show" style="height: 150px;">
+            <img src="/images/foxyhappy.png" class="img-hover" style="height: 150px; display: none">
           </div>
         </div>
 
@@ -124,12 +119,12 @@
       <br><br><br>
       <div class="row text-center">
         <div class="col-12">
-          <h3 style="color: grey;">Choose Level</h3>
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" class="start-button" onclick="clearArray(), generateDiv(2), generateHex(2), randomColor(colorArray)"> 1 </button>
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" class="start-button" onclick="clearArray(), generateDiv(3), generateHex(3), randomColor(colorArray)"> 2 </button>
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" class="start-button" onclick="clearArray(), generateDiv(4), generateHex(4), randomColor(colorArray)"> 3 </button>
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" class="start-button" onclick="clearArray(), generateDiv(5), generateHex(5), randomColor(colorArray)"> 4 </button>
-          <button style="background-color: #FF6666; color: white; border-radius: 10px;" class="start-button" onclick="clearArray(), generateDiv(6), generateHex(6), randomColor(colorArray)"> 5 </button>
+          <h3>Choose Level</h3>
+          <button class="start-button btn-level" onclick="clearArray(), generateDiv(2), generateHex(2), randomColor(colorArray)"> 1 </button>
+          <button class="start-button btn-level" onclick="clearArray(), generateDiv(3), generateHex(3), randomColor(colorArray)"> 2 </button>
+          <button class="start-button btn-level" onclick="clearArray(), generateDiv(4), generateHex(4), randomColor(colorArray)"> 3 </button>
+          <button class="start-button btn-level" onclick="clearArray(), generateDiv(5), generateHex(5), randomColor(colorArray)"> 4 </button>
+          <button class="start-button btn-level" onclick="clearArray(), generateDiv(6), generateHex(6), randomColor(colorArray)"> 5 </button>
         </div>
       </div>
 
