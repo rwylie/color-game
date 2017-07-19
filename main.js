@@ -57,8 +57,8 @@ function generateDiv(num) {
         matchArray.splice(matchArray.indexOf(color), 1);
         console.log(matchArray);
         if (matchArray.length < 2){
-          document.getElementById('determine-win').innerHTML = "Practice makes perfect.";
-
+          document.getElementById('determine-win').innerHTML = "Foxies keep practicing";
+          document.getElementById('images-win').innerHTML = '<img height="50px" src="/images/foxysad.png">';
           resetGame();
         }
         else {
@@ -67,6 +67,7 @@ function generateDiv(num) {
       }
     else {
       document.getElementById('determine-win').innerHTML = "You Win!";
+      document.getElementById('images-win').innerHTML = '<img height="50px" src="/images/foxysmile.png">'
       resetGame();
     }
   }
