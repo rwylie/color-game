@@ -17,7 +17,7 @@ function generateDiv(num) {
     for (var i = 0; i < num; i++) {
       $('#target').append($(`<div class="showcase" id="showcase${i}"
       onclick="match(color${i})"
-        style="background: #FF6666; margin: auto; margin-bottom: 30px; height: 135px;
+        style="background: #FF6666; margin: auto; margin-bottom: 35px; height: 8em;
         border-radius: 20px;">
         <img src="images/foxy-emoji-1.png" class="img-fluid">
         <h3 id="answer${i}" style="color: #778899;"></h3><br><br>
@@ -63,6 +63,7 @@ function generateDiv(num) {
         }
         else {
           document.getElementById('determine-win').innerHTML = "Try Again!";
+          document.getElementById('images-win').innerHTML = '<img height="50px" src="/images/foxysly.png">';
         }
       }
     else {
