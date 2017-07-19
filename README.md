@@ -6,8 +6,16 @@ Hello Foxies, get your hex on with this fun little game to help you learn the he
 
 [Play HEXIEFOX](https://hexiefox.rondawylie.com)
 
-###Technologies used:
+<hr>
+
+## Installation
+to run locally:
+``` python3 -m http.server 8000 ```
+
+### Technologies used:
 * HTML/CSS
 * Javascript
 * Jquery
-* SASS
+
+
+
