@@ -9,7 +9,9 @@ var matchArray = [];
 function clearArray() {
   colorArray = [];
   matchArray = [];
+  $('#guess').show();
   $('#target').empty();
+  $('#images-win').empty();
 }
 
   //loop that creates multiple divs based on what level the user chooses
@@ -101,8 +103,9 @@ function generateDiv(num) {
 
 
   $(document).ready(function(){
-
-
+    $('#target').click(function() {
+      $('#guess').hide();
+    });
 
     $("body").on("click", "#showcase0", function() {
       $('#answer0').fadeIn('fast');
