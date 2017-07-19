@@ -8,7 +8,7 @@ Hello Foxies, get your hex on with this fun little game to help you learn the he
 <hr>
 
 ## Installation
-to run locally:
+
 ``` python3 -m http.server 8000 ```
 
 ### Technologies used:
