@@ -1,4 +1,3 @@
-# HexieFox
 
 ![hexiefox](https://user-images.githubusercontent.com/13789291/28230455-bd958380-68ac-11e7-8426-dd1a973c33ba.png)
 
