@@ -5,9 +5,10 @@
 var randomC;
 //empty array that later will push hexadecimal values to
 var colorArray = [];
-
+var matchArray = [];
 function clearArray() {
   colorArray = [];
+  matchArray = [];
   $('#target').empty();
 }
 
@@ -31,6 +32,7 @@ function generateDiv(num) {
     for (var i = 0; i < num; i++){
     	window['color' + i] = '#' + Math.floor(Math.random() *16777215).toString(16);
       colorArray.push(window['color' + i].toUpperCase());
+      matchArray.push(window['color' + i]);
       document.getElementById('showcase' + i).style.backgroundColor = colorArray[i].toUpperCase();
       document.getElementById('answer' + i).innerHTML = colorArray[i].toUpperCase();
     }
@@ -45,15 +47,35 @@ function generateDiv(num) {
 }
 
 //function that checks to see if the user chooses the correct color
+//add an if else statement that removes the color chosen by user from colorArray
+//then checks to see if there is one color left in colorArray the game is over
+
 
   function match(color) {
-    if (color.toUpperCase() === randomC.toUpperCase()) {
+    console.log(matchArray);
+    if (color.toUpperCase() !== randomC.toUpperCase()) {
+        matchArray.splice(matchArray.indexOf(color), 1);
+        console.log(matchArray);
+        if (matchArray.length < 2){
+          document.getElementById('determine-win').innerHTML = "Practice makes perfect.";
+
+          resetGame();
+        }
+        else {
+          document.getElementById('determine-win').innerHTML = "Try Again!";
+        }
+      }
+    else {
       document.getElementById('determine-win').innerHTML = "You Win!";
       resetGame();
-    }  else {
-      document.getElementById('determine-win').innerHTML = "Try Again!";
     }
   }
+
+
+  //colorArray level 1 has 2 elements in it, so if they guess one on level two
+  //it should show them the answer after one guess if it's wrong. So if there is
+  //one element left in the array, they have no more chances and the game is over
+
 
   // var points = 0;
   // function trackPoints() {
