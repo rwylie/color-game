@@ -1,5 +1,5 @@
 
-![hexiefox](https://user-images.githubusercontent.com/13789291/28230455-bd958380-68ac-11e7-8426-dd1a973c33ba.png)
+![hexiefox](https://user-images.githubusercontent.com/13789291/28380534-47c9cff6-6c7d-11e7-9dbb-5d529b45f4bc.png)
 
 Hello Foxies, get your hex on with this fun little game to help you learn the hexadecimal colors. 
 
@@ -8,13 +8,15 @@ Hello Foxies, get your hex on with this fun little game to help you learn the he
 <hr>
 
 ## Installation
-
+to run locally:
 ``` python3 -m http.server 8000 ```
 
-### Technologies used:
+## Technologies used:
 * HTML/CSS
 * Javascript
 * Jquery
+
+
 
 
 
