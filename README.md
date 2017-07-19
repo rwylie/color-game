@@ -4,5 +4,10 @@
 
 Hello Foxies, get your hex on with this fun little game to help you learn the hexadecimal colors. 
 
-[Play HEXIEFOX](https://www.hexiefox.rondawylie.com)
-###
+[Play HEXIEFOX](https://hexiefox.rondawylie.com)
+
+###Technologies used:
+* HTML/CSS
+* Javascript
+* Jquery
+* SASS
