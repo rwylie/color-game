@@ -1,5 +1,4 @@
-
-![hexiefox](https://user-images.githubusercontent.com/13789291/28380534-47c9cff6-6c7d-11e7-9dbb-5d529b45f4bc.png)
+![hexiefox](https://user-images.githubusercontent.com/13789291/28380751-1598342c-6c7e-11e7-8f51-6719049abed5.png)
 
 Hello Foxies, get your hex on with this fun little game to help you learn the hexadecimal colors. 
 
