@@ -50,7 +50,7 @@ function generateDiv(num) {
 }
 
 //function that checks to see if the user chooses the correct color
-//add an if else statement that removes the color chosen by user from colorArray
+//if else statement that removes the color chosen by user from colorArray
 //then checks to see if there is one color left in colorArray the game is over
 
 
