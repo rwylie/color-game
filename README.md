@@ -14,12 +14,12 @@ Hello Foxies, get your hex on with this fun little game to help you learn the he
 To create a simple game that shows a hexadecimal value and 3 color choices.  The user guesses the color and if it matches the hex number, user is a grand prize winner of something amazing, like an animation on the screen, or an invisble ice cream cone.
 
 ### Stretch Goals
-* graphics -[X]
-* levels - [X]
-* track points - [ ]
-* use SASS - [ ]
-* tutorial - [ ]
-* Add choice of game, guess by color, or guessing by number - [ ]
+- [X] graphics 
+- [X] levels
+- [ ] track points 
+- [ ] use SASS 
+- [ ] tutorial 
+- [ ] Add choice of game, guess by color, or guessing by number 
 
 ### Code I enjoyed writing
 * function match(color)
